@@ -33,6 +33,9 @@ product/lib64/libdpmtcm.so
 # Hotword Enrollment
 -product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
 
+# Hotword Enrollment
+-priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
+
 # IMS
 lib64/libdiag_system.so
 -product/app/uceShimService/uceShimService.apk
