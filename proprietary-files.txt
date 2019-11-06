@@ -402,7 +402,6 @@ vendor/lib/libhdmiedid.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libhfp.so
 vendor/lib/libidl.so
-vendor/lib/libjson.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libmdmdetect.so
@@ -445,7 +444,6 @@ vendor/lib/libqsap_sdk.so
 vendor/lib/libqti-perfd-client.so
 vendor/lib/libqti-perfd.so
 vendor/lib/libqti-util.so
-vendor/lib/libqti_vndfwk_detect.so
 vendor/lib/libqtigef.so
 vendor/lib/libsettings.so
 vendor/lib/libslimclient.so
@@ -736,7 +734,6 @@ vendor/lib64/libhwminijail.so
 vendor/lib64/libidl.so
 vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
-vendor/lib64/libjson.so
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libkeystore-engine-wifi-hidl.so
