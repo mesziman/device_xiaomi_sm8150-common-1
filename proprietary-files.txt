@@ -28,6 +28,9 @@ product/lib64/libdpmframework.so
 product/lib64/libdpmtcm.so
 -product/priv-app/dpmserviceapp/dpmserviceapp.apk
 
+# Hotword Enrollment
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
+
 # IMS
 lib64/libdiag_system.so
 -product/app/uceShimService/uceShimService.apk
