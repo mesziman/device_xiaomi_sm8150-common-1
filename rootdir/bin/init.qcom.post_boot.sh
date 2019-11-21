@@ -258,6 +258,9 @@ case "$target" in
         done
     done
 
+    # Setup readahead
+    find /sys/devices -name read_ahead_kb | while read node; do echo 128 > $node; done
+
     configure_memory_parameters
 
     echo "18432,23040,27648,32256,85296,120640" > /sys/module/lowmemorykiller/parameters/minfree
