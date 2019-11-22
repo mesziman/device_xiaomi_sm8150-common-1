@@ -19,6 +19,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/sm8150-common/sm8150-common-vend
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+PRODUCT_COPY_FILES +=  $(LOCAL_PATH)/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
+
 # Hardware
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
