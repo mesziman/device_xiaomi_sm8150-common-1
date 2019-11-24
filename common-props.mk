@@ -215,12 +215,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    vendor.iop.enable_uxe=1 \
-    vendor.iop.enable_prefetch_ofr=0 \
-    vendor.perf.iop_v3.enable=true \
-    persist.vendor.qti.games.gt.prof=1 \
-    vendor.perf.gestureflingboost.enable=true \
-    vendor.perf.workloadclassifier.enable=true \
     ro.vendor.at_library=libqti-at.so
 
 # RCS
