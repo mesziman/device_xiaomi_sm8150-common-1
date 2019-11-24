@@ -1,6 +1,8 @@
 # Bluetooth (aptX) - from crosshatch - PD1A.180720.030
-lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
-lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+product/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+product/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|6316d9d0cebc2af1ed5a57d346b7537c
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|b83ee083942711ffb4e7800600fac078
 
 # CNE
 product/framework/com.quicinc.cne.api-V1.1-java.jar
@@ -271,6 +273,7 @@ vendor/etc/init/init.mi_thermald.rc
 vendor/etc/init/init.time_daemon.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/ipacm.rc
+vendor/etc/init/ipacm-diag.rc
 vendor/etc/init/netmgrd.rc
 vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
@@ -816,7 +819,6 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libqseed3.so
 vendor/lib64/libqservice.so
 vendor/lib64/libqsocket.so
-vendor/lib64/libqti_vndfwk_detect.so
 vendor/lib64/libqtikeymaster4.so
 vendor/lib64/librcc.so
 vendor/lib64/libremosaic_daemon.so
