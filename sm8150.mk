@@ -136,7 +136,11 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.10.vendor
+    vendor.display.config@1.10.vendor \
+    libdisplayconfig \
+    libqdMetaData \
+    libqdMetaData.system \
+    libvulkan
 
 # DRM
 PRODUCT_PACKAGES += \
