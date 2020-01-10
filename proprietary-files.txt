@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bluetooth (aptX) - from crosshatch - PD1A.180720.030
 product/lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 product/lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
@@ -13,6 +14,16 @@ product/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
 product/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
 product/lib64/vendor.qti.hardware.data.latency@1.0.so
 product/lib64/vendor.qti.latency@2.0.so
+=======
+# ADSP
+vendor/bin/adsprpcd
+vendor/lib/libadsprpc.so
+vendor/lib/libadsp_default_listener.so
+vendor/lib64/libadsprpc.so
+vendor/lib64/libadsp_default_listener.so
+vendor/lib64/libmdsprpc.so
+vendor/lib64/libsdsprpc.so
+>>>>>>> e492491... sm8150-common: Build codec2 libs from source
 
 # DPM
 framework/tcmclient.jar
@@ -944,3 +955,80 @@ vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
 vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
+-vendor/app/pasrservice/pasrservice.apk
+vendor/bin/adpl
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
+vendor/bin/ipacm-diag
+vendor/bin/sscrpcd
+vendor/bin/vppservice
+vendor/bin/xtwifi-client
+vendor/bin/xtwifi-inet-agent
+vendor/etc/configstore/vpp.configstore.xml
+vendor/etc/gpfspath_oem_config.xml
+vendor/etc/hdr_config.cfg
+vendor/etc/init/cnd.rc
+vendor/etc/init/dataadpl.rc
+vendor/etc/init/dataqti.rc
+vendor/etc/init/dpmQmiMgr.rc
+vendor/etc/init/imsdatadaemon.rc
+vendor/etc/init/imsqmidaemon.rc
+vendor/etc/init/imsrcsd.rc
+vendor/etc/init/ims_rtp_daemon.rc
+vendor/etc/init/init-qcril-data.rc
+vendor/etc/init/init.time_daemon.rc
+vendor/etc/init/ipacm-diag.rc
+vendor/etc/init/ipacm.rc
+vendor/etc/init/ipa_fws.rc
+vendor/etc/init/netmgrd.rc
+vendor/etc/init/qseecomd.rc
+vendor/etc/init/vendor.qti.adsprpc-service.rc
+vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
+vendor/etc/init/vppservice.rc
+vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/vendor.qti.hardware.audiohalext@1.0-impl.so
+vendor/lib/liba2dpoffload.so
+vendor/lib/libbatterylistener.so
+vendor/lib/libcomprcapture.so
+vendor/lib/libexthwplugin.so
+vendor/lib/libFileMux_proprietary.so
+vendor/lib/libhdmiedid.so
+vendor/lib/libhdmipassthru.so
+vendor/lib/libhfp.so
+vendor/lib/libmmparser_lite_proprietary.so
+vendor/lib/libmmrtpdecoder_proprietary.so
+vendor/lib/libmmrtpencoder_proprietary.so
+vendor/lib/libqcodec2.so
+vendor/lib/libsn100u_fw.so
+vendor/lib/libsndmonitor.so
+vendor/lib/libspkrprot.so
+vendor/lib/libqsap_sdk.so
+vendor/lib/vendor.qti.hardware.audiohalext@1.0.so
+vendor/lib64/hw/displayfeature.default.so
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
+vendor/lib64/libalAILDC.so
+vendor/lib64/libalCFR.so
+vendor/lib64/libalhLDC.so
+vendor/lib64/libalLDC.so
+vendor/lib64/libappclassifier.so
+vendor/lib64/libarcsat.so
+vendor/lib64/libbatching.so
+vendor/lib64/libcacertclient.so
+vendor/lib64/libclient2slpi.notifier.so
+vendor/lib64/libft2vendor.so
+vendor/lib64/libgeofencing.so
+vendor/lib64/libnpu.so
+vendor/lib64/libperfconfig.so
+vendor/lib64/libqcrildatactl.so
+vendor/lib64/libqsap_sdk.so
+vendor/lib64/libskewknob.so
+vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libultrasound.so
+vendor/lib64/qtibus.so
+vendor/lib64/qtimutex.so
+vendor/lib64/unnhal-acc-adreno.so
+vendor/lib64/unnhal-acc-common.so
+vendor/lib64/unnhal-acc-hta.so
+vendor/lib64/unnhal-acc-hvx.so
+vendor/lib64/vendor.qti.hardware.capabilityconfigstore@1.0.so
+>>>>>>> e492491... sm8150-common: Build codec2 libs from source

@@ -202,14 +202,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Memory
 PRODUCT_PROPERTY_OVERRIDES += \
-<<<<<<< HEAD
-=======
-    dalvik.vm.heapmaxfree=8m \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapsize=512m \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heaptargetutilization=0.75 \
->>>>>>> 6651a5f... sm8150-common: remove unncessary dalvik prop
     ro.vendor.qti.sys.fw.bservice_enable=true \
     ro.vendor.qti.va_aosp.support=1 \
     ro.vendor.qti.va_odm.support=1
