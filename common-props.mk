@@ -215,7 +215,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C
 
 # Perf
-PRODUCT_PROPERTY_OVERRIDES += \
+#PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     vendor.iop.enable_uxe=1 \
     vendor.iop.enable_prefetch_ofr=0 \
