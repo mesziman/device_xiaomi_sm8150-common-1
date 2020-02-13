@@ -33,7 +33,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
     $(LOCAL_PATH)/overlay-pe
 
-PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Properties
 -include $(LOCAL_PATH)/common-props.mk
