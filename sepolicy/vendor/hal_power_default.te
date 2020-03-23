@@ -15,3 +15,5 @@ allow hal_power_default sysfs_kgsl:lnk_file rw_file_perms;
 
 # To get/set powerhal state property
 set_prop(hal_power_default, power_prop)
+allow hal_power_default input_device:chr_file { read write };
+allow hal_power_default input_device:chr_file { open };
