@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 get_prop({ appdomain -isolated_app }, vendor_fp_prop)
 get_prop({ appdomain -isolated_app }, mlipay_prop)
 
+=======
+# Allow appdomain to get persist_camera_prop
+get_prop(appdomain, vendor_camera_prop)
+get_prop(appdomain, persist_camera_prop)
+>>>>>>> b9504a86... cepheus: sepolicy: allow appdomain to get persist_camera_prop
