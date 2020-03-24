@@ -18,7 +18,7 @@ $(call inherit-product, device/xiaomi/cepheus/msmnile.mk)
 # Inherit some common PixelExperience stuff.
 $(call inherit-product, vendor/aosp/common.mk)
 
-TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BOOT_ANIMATION_RES := 2280
 TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
@@ -33,11 +33,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="cepheus" \
     TARGET_DEVICE="cepheus"
 
-ifeq ($(GAPPS_BUILD),true)
-    WITH_GAPPS := true
-    TARGET_GAPPS_ARCH := arm64
-    IS_PHONE := true
-    TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-endif
+WITH_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
