@@ -129,6 +129,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=true \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
+# Fingerprint
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.fp.fod=true \
+    ro.hardware.fp.goodix_fod=true \
+    persist.vendor.sys.fp.fod.location.X_Y=445,1931 \
+    persist.vendor.sys.fp.fod.size.width_height=190,190
+
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1 \
