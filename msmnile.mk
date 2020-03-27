@@ -272,7 +272,9 @@ PRODUCT_PACKAGES += \
     libOmxSwVencMpeg4 \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libstagefrighthw \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
