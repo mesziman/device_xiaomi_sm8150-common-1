@@ -6,6 +6,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     af.fast_track_multiplier=1 \
     audio.deep_buffer.media=true \
     audio.offload.video=true \
+    persist.vendor.radio.atfwd.start=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.tmic.enabled=false \
     persist.vendor.audio.fluence.voicecall=true \
@@ -127,7 +128,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.multicam=TRUE \
     persist.camera.gyro.disable=0 \
     camera.disable_zsl_mode=true \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap \
+    ro.miui.notch=1
 
 # Fingerprint
 PRODUCT_PROPERTY_OVERRIDES += \
