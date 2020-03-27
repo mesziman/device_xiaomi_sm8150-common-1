@@ -4,6 +4,11 @@
     "target_path": "vendor/xiaomi/cepheus",
     "branch": "new20"
   },
+   {
+    "repository": "omnirom/android_prebuilts_prebuiltapks",
+    "target_path": "vendor/microg",
+    "branch": "master"
+  },
   {
     "repository": "mesziman/kernel_xiaomi_sm8150-2",
     "target_path": "kernel/xiaomi/cepheus",
