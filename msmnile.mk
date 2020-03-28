@@ -62,6 +62,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
+#Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio@1.4 \
+    android.hardware.radio.config@1.0 \
+    libprotobuf-cpp-full \
+    librmnetctl
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
