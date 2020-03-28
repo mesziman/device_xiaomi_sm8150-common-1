@@ -380,6 +380,9 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
 # Recovery
 PRODUCT_PACKAGES += \
     librecovery_updater_xiaomi
