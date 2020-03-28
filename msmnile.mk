@@ -351,9 +351,6 @@ PRODUCT_PACKAGES += \
     PixelLiveWallpaperPrebuilt
 
 # Power
-
-
-
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3-service.cepheus-libperfmgr
 
@@ -481,7 +478,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libdisplayconfig.vendor \
-    libqdMetaData
+    libqdMetaData \
+    libqdMetaData.system \
+    libvulkan
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
