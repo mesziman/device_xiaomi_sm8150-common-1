@@ -57,7 +57,7 @@
 }
  ,
 {
-    "repository": "platform_vendor_qcom_sdclang-8.0",
+    "repository": "mesziman/platform_vendor_qcom_sdclang-8.0",
     "target_path": "vendor/qcom/sdclang",
     "branch": "9.0"
 }
