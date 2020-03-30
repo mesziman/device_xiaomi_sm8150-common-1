@@ -165,21 +165,10 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    vendor.display.config@1.10.vendor \
     android.hardware.graphics.composer@2.3-service \
     android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    vendor.qti.hardware.display.allocator-service
-
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@2.0-impl-qti-display
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.display.mapper@3.0.vendor
-
-PRODUCT_PACKAGES += \
-    gralloc.msmnile \
-    hwcomposer.msmnile \
-    memtrack.msmnile
+    android.hardware.memtrack@1.0-service 
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -293,7 +282,6 @@ PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/seccomp_policy/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
 PRODUCT_COPY_FILES += \
