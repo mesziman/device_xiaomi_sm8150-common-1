@@ -25,6 +25,15 @@ persist.vendor.sys.pay.                 u:object_r:mlipay_prop:s0
 persist.vendor.sys.provision.status     u:object_r:mlipay_prop:s0
 ro.hardware.fp.fod			u:object_r:mlipay_prop:s0
 
+ro.boot.factorybuild                u:object_r:public_vendor_default_prop:s0
+ro.boot.hwc                         u:object_r:public_vendor_default_prop:s0
+ro.boot.hwversion                   u:object_r:public_vendor_default_prop:s0
+ro.carrier.name                     u:object_r:public_vendor_default_prop:s0
+ro.cust.test                        u:object_r:public_vendor_default_prop:s0
+ro.miui.cust_variant                u:object_r:public_vendor_default_prop:s0
+ro.product.mod_device               u:object_r:public_vendor_default_prop:s0
+
+
 # Xiaomi thermal daemon
 sys.thermal.                             u:object_r:thermal_normal_prop:s0
 
