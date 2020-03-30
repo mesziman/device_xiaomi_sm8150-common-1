@@ -24,7 +24,6 @@
     <!-- Doze: does this device support STATE_DOZE?  -->
     <bool name="doze_display_state_supported">true</bool>
 
-<<<<<<< HEAD
     <!-- Type of a sensor that provides a low-power estimate of the desired display
          brightness, suitable to listen to while the device is asleep (e.g. during
          always-on display) -->
@@ -48,6 +47,4 @@
         <item>0</item>
     </integer-array>
 
-=======
->>>>>>> 81d00da0c10b361ef36a562ee83f5ad9c3793ea0
 </resources>

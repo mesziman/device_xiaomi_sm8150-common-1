@@ -1,5 +1,4 @@
 [
-<<<<<<< HEAD
 {
     "repository": "mesziman/proprietary_vendor_xiaomi-4",
     "target_path": "vendor/xiaomi/cepheus",
@@ -63,24 +62,4 @@
     "branch": "9.0"
 }
 
-=======
-  { 
-    "remote"       : "github",
-    "repository"   : "markakash/vendor_xiaomi_cepheus",
-    "target_path"  : "vendor/xiaomi/cepheus",
-    "branch"       : "ten"
-  },
-  { 
-    "remote"       : "github",
-    "repository"   : "markakash/kernel_xiaomi_sm8150",
-    "target_path"  : "kernel/xiaomi/sm8150",
-    "branch"       : "ten"
-  },
-  {
-    "repository": "packages_apps_PixelLiveWallpaper",
-    "target_path": "packages/apps/PixelLiveWallpaper",
-    "branch": "ten",
-    "remote": "pixel-gitlab"
-  }
->>>>>>> 81d00da0c10b361ef36a562ee83f5ad9c3793ea0
 ]
