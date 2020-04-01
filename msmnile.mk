@@ -67,7 +67,7 @@ PRODUCT_COPY_FILES += \
 #Radio
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
-    android.hardware.radio.config@1.0 \
+    android.hardware.radio.config@1.0# \
     libprotobuf-cpp-full \
     librmnetctl
 
@@ -385,7 +385,7 @@ PRODUCT_PACKAGES += \
     libril \
     librilutils
 
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # Recovery
@@ -435,8 +435,8 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    thermal.msmnile
+    android.hardware.thermal@1.0-service# \
+    #thermal.msmnile
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
@@ -491,9 +491,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libnl \
     libdisplayconfig.vendor \
-    libqdMetaData \
-    libqdMetaData.system \
-    libvulkan
+    libqdMetaData 
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
