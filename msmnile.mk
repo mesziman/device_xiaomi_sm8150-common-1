@@ -61,11 +61,11 @@ PRODUCT_COPY_FILES += \
 
 
 # HIDL
-PRODUCT_COPY_FILES += \
+#PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/manifest-qva.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest.xml
 
 #Radio
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
     android.hardware.radio.config@1.0# \
     libprotobuf-cpp-full \
