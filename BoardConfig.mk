@@ -232,7 +232,7 @@ WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+#TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk

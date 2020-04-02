@@ -159,7 +159,7 @@ persist.dbg.wfc_avail_ovr=1
 
 # Memory
 ro.vendor.qti.va_aosp.support=1
-
+ro.vendor.qti.va_odm.support=1
 # Perf
 
 # RIL
