@@ -61,7 +61,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 11
 TARGET_KERNEL_NO_LLVM_BINUTILS := false
-TARGET_KERNEL_CONFIG := cepheus_defconfig
+TARGET_KERNEL_CONFIG := cepheus_perf_defconfig
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/cepheus
 endif
@@ -235,7 +235,7 @@ WIFI_HIDL_FEATURE_AWARE := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+#TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk

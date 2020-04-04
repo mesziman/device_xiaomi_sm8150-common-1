@@ -1128,7 +1128,7 @@
      <!-- Whether notify fingerprint client of successful cancelled authentication -->
      <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool>
      <!-- Whether to show a custom view for FOD -->
-         <bool name="config_needCustomFODView">false</bool>
+         <bool name="config_needCustomFODView">true</bool>
     <!-- Display has physical cutout -->
     <bool name="config_physicalDisplayCutout">true</bool>
 </resources>
