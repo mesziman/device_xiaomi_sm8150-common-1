@@ -161,6 +161,14 @@ persist.dbg.wfc_avail_ovr=1
 ro.vendor.qti.va_aosp.support=1
 ro.vendor.qti.va_odm.support=1
 # Perf
+ro.vendor.extension_library=libqti-perfd-client.so
+vendor.iop.enable_uxe=1
+vendor.iop.enable_prefetch_ofr=0
+vendor.perf.iop_v3.enable=true
+persist.vendor.qti.games.gt.prof=1
+vendor.perf.gestureflingboost.enable=true
+vendor.perf.workloadclassifier.enable=true
+ro.vendor.at_library=libqti-at.so
 
 # RIL
 persist.sys.fflag.override.settings_network_and_internet_v2=true
