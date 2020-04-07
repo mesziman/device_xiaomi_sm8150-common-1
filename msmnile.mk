@@ -358,10 +358,10 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.cepheus-libperfmgr
+    android.hardware.power@1.2-service.xiaomi_msmnile
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/powerhint.json:system/etc/powerhint.json 
+    $(LOCAL_PATH)/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # QMI
 PRODUCT_PACKAGES += \

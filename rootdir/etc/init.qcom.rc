@@ -137,18 +137,6 @@ on boot
     # Sensors log dir
     mkdir /data/vendor/sensors 0770 system system
 
-on property:vendor.post_boot.parsed=1
-
-    # Enable powersaving
-    write /sys/module/lpm_levels/parameters/sleep_disabled 0
-
-    # Enable idle state listener
-    write /sys/class/drm/card0/device/idle_encoder_mask 1
-    write /sys/class/drm/card0/device/idle_timeout_ms 100
-
-    # Enable PowerHAL hint processing
-    setprop vendor.powerhal.init 1
-
 on post-fs-data
     # Create directory used by display clients
     mkdir /data/vendor/display 0770 system graphics
