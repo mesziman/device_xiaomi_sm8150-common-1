@@ -1,6 +1,3 @@
 hal_client_domain(system_app, hal_mlipay)
-<<<<<<< HEAD
 
 get_prop(system_app, persist_camera_prop)
-=======
->>>>>>> 21a7b825... cepheus: Adress MiPay denials

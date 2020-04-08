@@ -66,7 +66,6 @@ TARGET_KERNEL_CONFIG := cepheus_defconfig
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/cepheus
 endif
-TARGET_BOARD_PLATFORM := msmnile
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno640
 
