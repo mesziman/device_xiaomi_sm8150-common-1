@@ -13,15 +13,10 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/cepheus/msmnile.mk)
 
 $(call inherit-product, vendor/cos/config/common_full_phone.mk)
 
-
-TARGET_BOOT_ANIMATION_RES := 2280
-TARGET_GAPPS_ARCH := arm64
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := cos_cepheus

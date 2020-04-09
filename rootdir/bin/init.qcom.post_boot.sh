@@ -29,10 +29,6 @@
 
 target=`getprop ro.board.platform`
 
-function configure_read_ahead_kb_values() {
-    echo 128 > /sys/block/sda/bdi/read_ahead_kb
-}
-
 function configure_memory_parameters() {
     # Set Memory parameters.
     #
@@ -91,52 +87,9 @@ function configure_memory_parameters() {
     # Set swappiness to 100 for all targets
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
     echo 100 > /proc/sys/vm/swappiness
-
-    configure_read_ahead_kb_values
+    echo 128 > /sys/block/sda/bdi/read_ahead_kb
 }
 
-function configure_ux_task_cgroup_membership() {
-   # EXPERIMENTAL: Optimize UX task cgroup membership
-	PIDSS=`ps -AT | grep system_server | awk '{print $3}'`
-
-	echo $PIDSS > /dev/cpuset/foreground/cgroup.procs
-	echo $PIDSS > /dev/stune/foreground/cgroup.procs
-
-	PIDAIO=`ps -AT | grep android.io | awk '{print $3}'`
-
-	echo $PIDAIO > /dev/stune/foreground/tasks
-
-	PIDAA=`ps -AT | grep android.anim | awk '{print $3}'`
-
-	echo $PIDAA > /dev/cpuset/top-app/tasks
-
-	PIDAALF=`ps -AT | grep android.anim.lf | awk '{print $3}'`
-
-	echo $PIDAALF > /dev/cpuset/top-app/tasks
-
-	PIDAFG=`ps -AT | grep android.fg | awk '{print $3}'`
-
-	echo $PIDAFG > /dev/stune/foreground/tasks
-
-	PIDAUI=`ps -AT | grep android.ui | awk '{print $3}'`
-
-	echo $PIDAUI > /dev/stune/top-app/tasks
-
-	PIDAD=`ps -AT | grep android.display | awk '{print $3}'`
-
-	echo $PIDAD > /dev/cpuset/top-app/tasks
-	echo $PIDAD > /dev/stune/top-app/tasks
-
-	PIDAS=`ps -AT | grep ndroid.systemui | awk '{print $3}'`
-
-	echo $PIDAS > /dev/cpuset/top-app/tasks
-	echo $PIDAS > /dev/stune/top-app/tasks
-
-	PIDRECLAIMD=`ps -AT | grep reclaimd | awk '{print $3}'`
-
-	echo $PIDRECLAIMD > /dev/stune/top-app/tasks
-
-}
 case "$target" in
     "msmnile")
     # Core control parameters for gold
@@ -167,18 +120,17 @@ case "$target" in
     echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 
     # Setting b.L scheduler parameters
+    echo 95 95 > /proc/sys/kernel/sched_upmigrate
+    echo 85 85 > /proc/sys/kernel/sched_downmigrate
+    echo 100 > /proc/sys/kernel/sched_group_upmigrate
+    echo 10 > /proc/sys/kernel/sched_group_downmigrate
+    echo 1 > /proc/sys/kernel/sched_walt_rotate_big_tasks
 
-    echo ENERGY_AWARE > /sys/kernel/debug/sched_features
-    echo 134217728 > /sys/block/dm-7/queue/discard_max_bytes
     # cpuset parameters
-    echo 0-7 > /dev/cpuset/top-app/cpus
-    echo 0-3,5-6 > /dev/cpuset/foreground/cpus
     echo 0-1 > /dev/cpuset/background/cpus
-    echo 0-3 > /dev/cpuset/system-background/cpus
+    echo 0-2 > /dev/cpuset/system-background/cpus
     echo 0-3 > /dev/cpuset/restricted/cpus
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+
     # Setup final blkio
     # value for group_idle is us
     echo 1000 > /dev/blkio/blkio.weight
@@ -188,18 +140,25 @@ case "$target" in
 
     # Configure governor settings for silver cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 1209600 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
+    echo 576000 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
     # Configure governor settings for gold cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 1612800 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/pl
 
     # Configure governor settings for gold+ cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 1612800 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 
     # Configure input boost settings
     echo "0:1324800" > /sys/module/cpu_boost/parameters/input_boost_freq
@@ -300,9 +259,7 @@ case "$target" in
 
     configure_memory_parameters
 
-    echo "18432,23040,27648,38708,102356,144768" > /sys/module/lowmemorykiller/parameters/minfree
-    configure_ux_task_cgroup_membership
-
+    echo "18432,23040,27648,32256,85296,120640" > /sys/module/lowmemorykiller/parameters/minfree
     ;;
 esac
 

@@ -15,6 +15,8 @@
 #
 
 # Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Enable updating of APEXes
@@ -25,7 +27,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/cepheus/cepheus-vendor.mk)
--include vendor/qcom/common/bt/qti-wfd.mk
+#-include vendor/qcom/common/bt/qti-wfd.mk
 -include vendor/qcom/common/perf/qti-perf.mk
 
 
@@ -372,6 +374,10 @@ PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor
 
+
+#Fingerprint
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product_privapp-permissions-qti.xml \
