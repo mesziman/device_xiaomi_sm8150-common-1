@@ -58,6 +58,9 @@ BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
+#TARGET_KERNEL_CLANG_VERSION := 11
+#TARGET_KERNEL_NO_LLVM_BINUTILS := false
+
 #TARGET_KERNEL_CLANG_VERSION := 8
 #TARGET_KERNEL_CLANG_PATH := /root/cos/vendor/qcom/sdclang-8.0/linux-x86/
 TARGET_KERNEL_CONFIG := cepheus_defconfig
@@ -206,7 +209,6 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(TOP)/device/qcom/sepolicy/product/public
 # Vendor init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_cepheus
 TARGET_RECOVERY_DEVICE_MODULES := libinit_cepheus
