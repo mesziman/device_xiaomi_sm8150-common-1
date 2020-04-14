@@ -19,6 +19,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+$(call inherit-product, vendor/google/customization/config.mk)
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -334,9 +335,11 @@ PRODUCT_PACKAGES += \
     com.android.nfc_extras \
     com.gsma.services.nfc \
     com.nxp.nfc.nq \
+    NQNfcNci \
+    Tag
+
+PRODUCT_PACKAGES += \
     nfc_nci.nqx.default.hw \
-    NfcNci \
-    Tag \
     vendor.nxp.hardware.nfc@1.2-service
 
 PRODUCT_COPY_FILES += \
