@@ -336,15 +336,20 @@ PRODUCT_PACKAGES += \
     com.gsma.services.nfc \
     com.nxp.nfc.nq \
     NQNfcNci \
-    Tag
+    Tag \
+    libnqnfc_nci_jni \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
 
 PRODUCT_PACKAGES += \
+    SecureElement \
     nfc_nci.nqx.default.hw \
     vendor.nxp.hardware.nfc@1.2-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
-    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+    $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
+    $(LOCAL_PATH)/nfc/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp_RF.conf
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml \
