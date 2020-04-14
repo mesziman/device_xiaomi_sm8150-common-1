@@ -269,7 +269,8 @@ service vendor.tftp_server /vendor/bin/tftp_server
 service vendor.sensors /vendor/bin/sscrpcd sensorspd
     class early_hal
     user system
-    group system
+    group system wakelock
+    capabilities BLOCK_SUSPEND
 
 service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
@@ -323,7 +324,8 @@ on property:ro.vendor.ril.mbn_copy_completed=1
 
 service charger /system/bin/charger
     class charger
-    group system graphics
+    group system graphics input
+    capabilities SYS_BOOT
     seclabel u:r:charger:s0
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
