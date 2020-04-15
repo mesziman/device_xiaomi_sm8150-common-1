@@ -65,9 +65,16 @@ ro.sensor.proximity=true
 persist.rcs.supported=1
 
 # RIL
-DEVICE_PROVISIONED=1
-persist.vendor.radio.enable_temp_dds=true
+#
 persist.vendor.radio.force_on_dc=true
+DEVICE_PROVISIONED=1
+persist.radio.apm_sim_not_pwdn=1
+persist.radio.dynamic_sar=false
+persist.radio.multisim.config=dsds
+persist.radio.NO_STAPA=1
+persist.radio.sar_sar_sensor=true
+persist.radio.VT_HYBRID_ENABLE=1
+persist.vendor.radio.enable_temp_dds=true
 ril.subscription.types=RUIM
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=22,22
@@ -80,3 +87,10 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 
 # WiFi
 wifi.interface=wlan0
+
+
+ro.rom.zone=2
+ro.miui.has_gmscore=1
+ro.miui.build.region=eea
+ro.miui.ui.version.code=9
+ro.miui.ui.version.name=V11
