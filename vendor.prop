@@ -211,3 +211,7 @@ debug.sf.early_gl_app_phase_offset_ns=15000000
 persist.debug.wfd.enable=1
 persist.sys.wfd.virtual=0
 vendor.power.pasr.enabled=true
+ro.surface_flinger.vsync_event_phase_offset_ns=2000000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
+#NFC
+ro.se.type=eSE,HCE,UICC
