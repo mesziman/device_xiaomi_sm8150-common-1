@@ -121,6 +121,7 @@ persist.vendor.data.mode=concurrent
 debug.egl.hw=0
 debug.mdpcomp.logs=0
 debug.sf.hw=0
+debug.hwui.renderer=skiavk
 vendor.gralloc.disable_ubwc=0
 ro.vendor.display.ad=1
 ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg
