@@ -238,5 +238,8 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 #TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk
