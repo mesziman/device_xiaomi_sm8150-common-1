@@ -14,6 +14,11 @@
     "target_path": "kernel/xiaomi/cepheus",
     "branch": "derp-riced"
   },
+    {
+    "repository": "mesziman/proprietary_vendor_qcom_common",
+    "target_path": "vendor/qcom/common",
+    "branch": "quartz"
+  },
 
   {
     "repository": "LineageOS/android_vendor_nxp_interfaces_opensource_nfc",
@@ -54,28 +59,7 @@
     "repository": "DarkDampSquib/vendor_MiuiCamera",
     "target_path": "vendor/MiuiCamera",
     "branch": "master"
-} ,
- {
-   "repository" : "LineageOS/android_hardware_qcom-caf_common",
-   "target_path": "hardware/qcom/common",
-   "branch"     : "lineage-17.1"
- },
- {
-   "repository" : "SOVIET-ANDROID/platform_hardware_qcom_display",
-   "target_path": "hardware/qcom/display-caf/sm8150",
-   "branch"     : "10.0-8150"
- },
-  {
-   "repository" : "SOVIET-ANDROID/platform_hardware_qcom_audio",
-   "target_path": "hardware/qcom/audio-caf/sm8150",
-   "branch"     : "10.0-8150"
- },
-  {
-   "repository" : "SOVIET-ANDROID/platform_hardware_qcom_media",
-   "target_path": "hardware/qcom/media-caf/sm8150",
-   "branch"     : "10.0-8150"
- },
-
+},
 {
     "repository": "mesziman/platform_vendor_qcom_sdclang-8.0",
     "target_path": "vendor/qcom/sdclang",
