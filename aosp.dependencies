@@ -2,7 +2,7 @@
 {
     "repository": "mesziman/proprietary_vendor_xiaomi-4",
     "target_path": "vendor/xiaomi/cepheus",
-    "branch": "new20"
+    "branch": "new20-oss-display"
   },
    {
     "repository": "omnirom/android_prebuilts_prebuiltapks",
