@@ -61,7 +61,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CLANG_VERSION := 11
 TARGET_KERNEL_NO_LLVM_BINUTILS := false
-TARGET_KERNEL_CONFIG := cepheus_perf_defconfig
+TARGET_KERNEL_CONFIG := cepheus_defconfig
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/xiaomi/cepheus
 endif
@@ -97,7 +97,7 @@ TARGET_TS_MAKEUP := false
 TARGET_USES_PREBUILT_CAMERA_SERVICE := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
 TARGET_USES_MEDIA_EXTENSIONS := true
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+#TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
 VENDOR_SECURITY_PATCH := 2020-01-01
 
@@ -239,9 +239,6 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 
 #TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 
-# VNDK
-BOARD_VNDK_VERSION := current
 #PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION += $(shell find $(DEVICE_PATH)/jar-profiles/ -iname '*.txt')
-
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk
