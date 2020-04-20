@@ -242,7 +242,7 @@ QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 
 # VNDK
 BOARD_VNDK_VERSION := current
-PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION += $(shell find $(DEVICE_PATH)/jar-profiles/ -iname '*.txt')
+#PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION += $(shell find $(DEVICE_PATH)/jar-profiles/ -iname '*.txt')
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk
