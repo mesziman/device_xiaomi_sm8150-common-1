@@ -503,8 +503,6 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.vendor \
     libqdMetaData 
 
-PRODUCT_BOOT_JARS += \
-    WfdCommon
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
