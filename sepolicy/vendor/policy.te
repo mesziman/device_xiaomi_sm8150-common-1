@@ -1,0 +1,51 @@
+
+#============= hal_audio_default ==============
+allow hal_audio_default sysfs:dir r_dir_perms;
+
+#============= hal_graphics_composer_default ==============
+allow hal_graphics_composer_default default_android_hwservice:hwservice_manager find;
+allow hal_graphics_composer_default default_prop:file { read open write getattr map };
+allow hal_graphics_composer_default init:binder call;
+allow rild default_prop:file { read open write getattr map };
+
+#============= hal_sensors_default ==============
+allow hal_sensors_default default_prop:file rw_file_perms;
+allow hal_sensors_default unlabeled:dir r_dir_perms;
+
+
+#============= init ==============
+allow init default_android_hwservice:hwservice_manager { add find };
+allow init hal_power_hwservice:hwservice_manager add;
+allow init hidl_base_hwservice:hwservice_manager add;
+
+#============= platform_app ==============
+allow platform_app default_android_hwservice:hwservice_manager find;
+
+#============= qti_init_shell ==============
+allow qti_init_shell debugfs:file write;
+allow qti_init_shell self:capability dac_override;
+allow qti_init_shell toolbox_exec:file getattr;
+
+#============= rild ==============
+allow rild default_prop:file read;
+
+#============= sensors ==============
+allow sensors unlabeled:dir search;
+
+#============= system_server ==============
+allow system_server init:binder call;
+allow system_server vendor_default_prop:file read;
+
+#============= untrusted_app_27 ==============
+allow untrusted_app_27 mnt_vendor_file:dir search;
+allow untrusted_app_27 proc:file read;
+allow untrusted_app_27 proc_zoneinfo:file read;
+allow untrusted_app_27 user_profile_data_file:dir getattr;
+
+#============= vendor_init ==============
+allow vendor_init mlipay_prop:property_service set;
+allow vendor_init system_data_file:dir write;
+allow vendor_init vendor_camera_prop:property_service set;
+allow vendor_init vendor_fp_prop:property_service set;
+allow vendor_init default_prop:property_service set;
+allow vendor_init system_data_file:dir create_dir_perms;

@@ -504,9 +504,6 @@ PRODUCT_PACKAGES += \
     libqdMetaData 
 
 
-# VNDK
-PRODUCT_PACKAGES += \
-    vndk_package
 #
 # XiaomiParts
 PRODUCT_PACKAGES += \

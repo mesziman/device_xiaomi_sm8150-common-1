@@ -1,6 +1,0 @@
-type ir_spi_device, dev_type, file_type;
-
-
-allow ueventd ir_spi_device:chr_file { create getattr };
-
-allow hal_ir_default ir_spi_device:chr_file rw_file_perms;
