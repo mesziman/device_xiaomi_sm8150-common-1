@@ -295,6 +295,7 @@ PRODUCT_PACKAGES += \
     libOmxSwVencMpeg4 \
     libOmxVdec \
     libOmxVenc \
+    libgui_vendor \
     libstagefrighthw 
 
 PRODUCT_COPY_FILES += \
