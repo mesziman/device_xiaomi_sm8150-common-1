@@ -19,7 +19,11 @@
     "target_path": "vendor/qcom/common",
     "branch": "quartz"
   },
-
+  {
+    "repository": "syberia-project/platform_vendor_google_customization",
+    "target_path": "vendor/google/customization",
+    "branch": "10.0"
+  },
   {
     "repository": "LineageOS/android_vendor_nxp_interfaces_opensource_nfc",
     "target_path": "vendor/nxp/opensource/interfaces/nfc",
