@@ -72,7 +72,8 @@ on early-fs
 on fs
     start hwservicemanager
     mount_all /vendor/etc/fstab.qcom --early
-
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
     mkdir /mnt/vendor/persist/data 0700 system system
     mkdir /mnt/vendor/persist/audio 0755 system system
     mkdir /mnt/vendor/persist/camera 0777 root root

@@ -19,15 +19,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-$(call inherit-product, vendor/google/customization/config.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/xiaomi/cepheus/cepheus-vendor.mk)
 
--include vendor/qcom/common/bt/qti-wfd.mk
+-include vendor/qcom/common/wfd/qti-wfd.mk
+-include vendor/qcom/common/av/qti-av.mk
+
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
@@ -71,12 +71,14 @@ PRODUCT_COPY_FILES += \
 
 #Radio
 #PRODUCT_PACKAGES += \
+    android.hardware.radio@1.0 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.3 \
     android.hardware.radio@1.4 \
     android.hardware.radio.config@1.0 \
-    android.hardware.secure_element@1.0 \
-    android.hardware.radio.deprecated@1.0 # \
-    libprotobuf-cpp-full \
-    librmnetctl
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.secure_element@1.0 
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -345,6 +347,8 @@ PRODUCT_PACKAGES += \
     libnqnfc_nci_jni \
     nqnfcee_access.xml \
     nqnfcse_access.xml \
+
+PRODUCT_BOOT_JARS += com.nxp.nfc.nq
 
 PRODUCT_PACKAGES += \
     SecureElement \

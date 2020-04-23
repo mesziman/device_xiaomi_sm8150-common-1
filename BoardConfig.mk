@@ -234,7 +234,6 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 #TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_FLATTEN_APEX := true
 #PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION += $(shell find $(DEVICE_PATH)/jar-profiles/ -iname '*.txt')
 # Inherit from the proprietary version
 -include vendor/xiaomi/cepheus/BoardConfigVendor.mk
