@@ -31,25 +31,25 @@
   },
 
   {
-    "repository": "LineageOS/android_vendor_nxp_opensource_external_libnfc-nci",
+    "repository": "mesziman/android_vendor_nxp_opensource_external_libnfc-nci",
     "target_path": "vendor/nxp/opensource/commonsys/external/libnfc-nci",
     "branch": "lineage-17.1"
   },
 
   {
-    "repository": "LineageOS/android_vendor_nxp_opensource_frameworks",
+    "repository": "mesziman/android_vendor_nxp_opensource_frameworks",
     "target_path": "vendor/nxp/opensource/commonsys/frameworks",
     "branch": "lineage-17.1"
   },
 
   {
-    "repository": "LineageOS/android_vendor_nxp_opensource_packages_apps_Nfc",
+    "repository": "mesziman/android_vendor_nxp_opensource_packages_apps_Nfc",
     "target_path": "vendor/nxp/opensource/commonsys/packages/apps/Nfc",
     "branch": "lineage-17.1"
   },
 
   {
-    "repository": "LineageOS/android_vendor_nxp_opensource_halimpl",
+    "repository": "mesziman/android_vendor_nxp_opensource_halimpl",
     "target_path": "vendor/nxp/opensource/sn100x/halimpl",
     "branch": "lineage-17.1-sn100x"
   },
