@@ -28,6 +28,7 @@ allow qti_init_shell toolbox_exec:file getattr;
 
 #============= rild ==============
 allow rild default_prop:file read;
+allow netd proc:dir search;
 
 #============= sensors ==============
 allow sensors unlabeled:dir search;
