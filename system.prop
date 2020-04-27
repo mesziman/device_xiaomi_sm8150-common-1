@@ -86,6 +86,8 @@ ro.product.mod_device=cepheus_eea_global
 # WiFi
 wifi.interface=wlan0
 
+#audio
+qcom.hw.aac.encoder=true
 
 ro.rom.zone=2
 ro.miui.has_gmscore=1
