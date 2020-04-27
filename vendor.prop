@@ -215,6 +215,8 @@ ro.surface_flinger.vsync_event_phase_offset_ns=2000000
 ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 #NFC
 ro.se.type=eSE,HCE,UICC
+#BT
+ro.bluetooth.library_name=libbluetooth_qti.so
 
 #media codecs
 debug.stagefright.ccodec=1

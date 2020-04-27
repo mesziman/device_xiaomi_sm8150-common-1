@@ -290,7 +290,9 @@ PRODUCT_PACKAGES += \
     libOmxSwVencMpeg4 \
     libOmxVdec \
     libOmxVenc \
-    libstagefrighthw
+    libgui_vendor \
+    libstagefrighthw \
+    android.hardware.media.omx@1.0-impl
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
