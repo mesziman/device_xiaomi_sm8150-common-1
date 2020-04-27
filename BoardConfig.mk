@@ -114,6 +114,7 @@ endif
 
 # Display
 TARGET_USES_ION := true
+TARGET_USES_NEW_ION := true
 TARGET_DISABLED_UBWC := true
 TARGET_USES_NEW_ION_API := true
 USE_OPENGL_RENDERER := true
