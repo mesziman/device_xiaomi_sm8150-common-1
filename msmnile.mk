@@ -279,6 +279,8 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
+    liblasic \
+    libaacwrapper \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -289,6 +291,8 @@ PRODUCT_PACKAGES += \
     libOmxSwVdec \
     libOmxSwVencMpeg4 \
     libOmxVdec \
+    libOmxVdecHevc \
+    libOmxVidEnc \
     libOmxVenc \
     libgui_vendor \
     libstagefrighthw \
