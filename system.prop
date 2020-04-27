@@ -88,6 +88,8 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 # WiFi
 wifi.interface=wlan0
 
+#audio
+qcom.hw.aac.encoder=true
 
 ro.rom.zone=2
 ro.miui.has_gmscore=1
