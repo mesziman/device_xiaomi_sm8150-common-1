@@ -369,10 +369,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-rtti
 
-
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service
+    android.hardware.power@1.2-service.xiaomi_msmnile
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/power/config/msmnile/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -381,6 +384,7 @@ PRODUCT_PACKAGES += \
 
 # QCOM
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/permissions/product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product_privapp-permissions-qti.xml \
     $(LOCAL_PATH)/permissions/product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product_privapp-permissions-qti.xml
 
 # QTI common
