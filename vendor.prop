@@ -208,5 +208,6 @@ ro.se.type=eSE,HCE,UICC
 ro.hardware.nfc_nci=nqx.default
 
 #media codecs
+debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
