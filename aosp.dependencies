@@ -12,7 +12,7 @@
   {
     "repository": "mesziman/kernel_xiaomi_sm8150-2",
     "target_path": "kernel/xiaomi/cepheus",
-    "branch": "derp-riced"
+    "branch": "pelt"
   },
     {
     "repository": "mesziman/proprietary_vendor_qcom_common",
