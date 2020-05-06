@@ -970,7 +970,7 @@
          to maximize power savings but not all devices support it.
          Refer to power.h for details.
     -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">true</bool>
+    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
 
     <!-- enable doze powersaving mode -->
     <bool name="config_enableAutoPowerModes">true</bool>
@@ -1114,7 +1114,6 @@
         <item>3</item> <!-- COLOR_MODE_AUTOMATIC -->
     </integer-array>
     
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
