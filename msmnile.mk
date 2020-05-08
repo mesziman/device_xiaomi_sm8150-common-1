@@ -29,6 +29,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/cepheus/cepheus-vendor.mk)
 
 -include vendor/qcom/common/wfd/qti-wfd.mk
 -include vendor/qcom/common/av/qti-av.mk
+-include vendor/qcom/common/bt/qti-bt.mk
+
 
 
 # Soong namespaces
@@ -290,7 +292,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     liblasic \
-    libaacwrapper \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
@@ -512,6 +513,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.vendor \
     libqdMetaData 
 
+PRODUCT_BOOT_JARS += tcmiface
 
 #
 # XiaomiParts
