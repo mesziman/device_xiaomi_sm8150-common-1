@@ -100,6 +100,7 @@ case "$target" in
     # Core control parameters for gold
 
     echo ENERGY_AWARE > /sys/kernel/debug/sched_features
+    echo 134217728 > /sys/block/dm-7/queue/discard_max_bytes
     # cpuset parameters
     echo 0-7 > /dev/cpuset/top-app/cpus
     echo 0-3,5-6 > /dev/cpuset/foreground/cpus
