@@ -377,10 +377,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.3-service.cepheus-libperfmgr
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/powerhint.json:system/etc/powerhint.json 
+    android.hardware.power@1.3-service.cepheus-libperfmgr \
+    powerhint.json
 
 # QMI
 PRODUCT_PACKAGES += \

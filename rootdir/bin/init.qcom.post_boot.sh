@@ -98,18 +98,19 @@ function configure_memory_parameters() {
 case "$target" in
     "msmnile")
     # Core control parameters for gold
-
     echo ENERGY_AWARE > /sys/kernel/debug/sched_features
-    echo 134217728 > /sys/block/dm-7/queue/discard_max_bytes
+
+    # Setting b.L scheduler parameters
+    echo 95 95 > /proc/sys/kernel/sched_upmigrate
+    echo 85 85 > /proc/sys/kernel/sched_downmigrate
+    
     # cpuset parameters
     echo 0-7 > /dev/cpuset/top-app/cpus
     echo 0-3,5-6 > /dev/cpuset/foreground/cpus
     echo 0-1 > /dev/cpuset/background/cpus
     echo 0-3 > /dev/cpuset/system-background/cpus
     echo 0-3 > /dev/cpuset/restricted/cpus
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
+    
     # Setup final blkio
     # value for group_idle is us
     echo 1000 > /dev/blkio/blkio.weight
@@ -121,17 +122,22 @@ case "$target" in
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
     echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+     echo 1 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 
     # Configure governor settings for gold cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
     echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/hispeed_freq
 
     # Configure governor settings for gold+ cluster
     echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy7/scaling_governor
     echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
     echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-
+    echo 1 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/iowait_boost_enable
+    echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_freq
 
     # Disable wsf, beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.

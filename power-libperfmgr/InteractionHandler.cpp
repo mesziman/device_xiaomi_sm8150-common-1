@@ -40,7 +40,7 @@ InteractionHandler::InteractionHandler(std::shared_ptr<HintManager> const & hint
       mWaitMs(100),
       mMinDurationMs(1400),
       mMaxDurationMs(5650),
-      mDurationMs(0),
+      mDurationMs(0),mLastTimespec{0, 0},
       mHintManager(hint_manager) {
 }
 
