@@ -161,11 +161,6 @@ on property:sys.shutdown.requested=*
 on charger
     wait /dev/block/bootdevice/by-name/system
     mount ext4 /dev/block/bootdevice/by-name/system / ro barrier=1
-
-    mkdir /mnt/vendor/persist 0771 root system
-    wait /dev/block/platform/soc/1d84000.ufshc/by-name/persist
-    mount ext4 /dev/block/bootdevice/by-name/persist /mnt/vendor/persist nosuid nodev barrier=1
-
     start qcom-post-boot
     start vendor.hvdcp_opti
 
