@@ -116,6 +116,9 @@ persist.camera.gyro.disable=0
 persist.vendor.data.iwlan.enable=true
 persist.vendor.data.mode=concurrent
 
+
+#qcom
+persist.vendor.qcomsysd.enabled=1
 # Display
 
 debug.egl.hw=0
