@@ -104,7 +104,8 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors \
-    libqcompostprocbundle
+    libqcompostprocbundle \
+    libaacwrapper 
 
 PRODUCT_PACKAGES += \
     tinymix \
@@ -353,6 +354,8 @@ PRODUCT_PACKAGES += \
     com.gsma.services.nfc \
     com.nxp.nfc.nq \
     NfcNci \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
     Tag \
 
 PRODUCT_BOOT_JARS += com.nxp.nfc.nq
