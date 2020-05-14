@@ -38,10 +38,11 @@ allow system_server init:binder call;
 allow system_server vendor_default_prop:file read;
 
 #============= untrusted_app_27 ==============
-allow untrusted_app_27 mnt_vendor_file:dir search;
-allow untrusted_app_27 proc:file read;
+allow untrusted_app_27 mnt_vendor_file:dir r_dir_perms;
+allow untrusted_app_27 proc:file r_file_perms;
 allow untrusted_app_27 proc_zoneinfo:file read;
-allow untrusted_app_27 user_profile_data_file:dir getattr;
+allow untrusted_app_27 user_profile_data_file:dir r_file_perms;
+allow untrusted_app_27 app_data_file:file x_file_perms;
 
 #============= vendor_init ==============
 set_prop(vendor_init,  mlipay_prop);
