@@ -513,8 +513,7 @@ PRODUCT_PACKAGES += \
     libnl \
     libdisplayconfig \
     libdisplayconfig.vendor \
-    libqdMetaData \
-    libqdMetaData.system
+    libqdMetaData 
 
 PRODUCT_BOOT_JARS += tcmiface
 
