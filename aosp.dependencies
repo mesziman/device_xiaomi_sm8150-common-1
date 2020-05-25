@@ -68,6 +68,23 @@
     "repository": "mesziman/platform_vendor_qcom_sdclang-8.0",
     "target_path": "vendor/qcom/sdclang",
     "branch": "9.0"
+},
+{
+    "repository": "LucidProject/platform_hardware_qcom_display",
+    "target_path": "hardware/qcom-caf/sm8150/display",
+    "branch": "queen-cake-8150"
+},
+{
+    "repository": "LucidProject/platform_hardware_qcom_media",
+    "target_path": "hardware/qcom-caf/sm8150/media",
+    "branch": "queen-cake-8150"
+},
+{
+    "repository": "LucidProject/platform_hardware_qcom_audio",
+    "target_path": "hardware/qcom-caf/sm8150/audio",
+    "branch": "queen-cake-8150"
 }
+
+
 
 ]
