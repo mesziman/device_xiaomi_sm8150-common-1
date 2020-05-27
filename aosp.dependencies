@@ -71,9 +71,9 @@
 }
 ,
 {
-    "repository": "LucidProject/platform_hardware_qcom_display",
+    "repository": "SOVIET-ANDROID/platform_hardware_qcom_display",
     "target_path": "hardware/qcom-caf/sm8150/display",
-    "branch": "queen-cake-8150"
+    "branch": "10.0-8150"
 },
 {
     "repository": "LucidProject/platform_hardware_qcom_media",
