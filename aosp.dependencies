@@ -2,7 +2,7 @@
 {
     "repository": "mesziman/proprietary_vendor_xiaomi-4",
     "target_path": "vendor/xiaomi/cepheus",
-    "branch": "new20-oss-display"
+    "branch": "ten"
   },
    {
     "repository": "omnirom/android_prebuilts_prebuiltapks",
@@ -12,7 +12,7 @@
   {
     "repository": "mesziman/kernel_xiaomi_sm8150-2",
     "target_path": "kernel/xiaomi/cepheus",
-    "branch": "derp-riced-new"
+    "branch": "pelt-upstream"
   },
     {
     "repository": "mesziman/proprietary_vendor_qcom_common",
