@@ -88,3 +88,5 @@ ro.miui.has_gmscore=1
 ro.miui.build.region=eea
 ro.miui.ui.version.code=9
 ro.miui.ui.version.name=V11
+# zygote prefork
+persist.device_config.runtime_native.usap_pool_enabled=true
