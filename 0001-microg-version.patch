@@ -1,0 +1,56 @@
+From 2c3a3c796e49ac46bd32fc787bace81464c03019 Mon Sep 17 00:00:00 2001
+From: Gabor Meszaros <meszaros.gabor.10k@gmail.com>
+Date: Fri, 26 Jun 2020 12:10:51 +0200
+Subject: [PATCH] microg version
+
+---
+ aosp_cepheus.mk | 6 ++----
+ msmnile.mk      | 2 --
+ 2 files changed, 2 insertions(+), 6 deletions(-)
+
+diff --git a/aosp_cepheus.mk b/aosp_cepheus.mk
+index 051b408..dbb1067 100644
+--- a/aosp_cepheus.mk
++++ b/aosp_cepheus.mk
+@@ -21,7 +21,6 @@ $(call inherit-product, device/xiaomi/cepheus/msmnile.mk)
+ $(call inherit-product, vendor/aosp/common.mk)
+ 
+ TARGET_BOOT_ANIMATION_RES := 2280
+-TARGET_GAPPS_ARCH := arm64
+ 
+ # Device identifier. This must come after all inclusions.
+ PRODUCT_NAME := aosp_cepheus
+@@ -29,10 +28,7 @@ PRODUCT_DEVICE := cepheus
+ PRODUCT_BRAND := Xiaomi
+ PRODUCT_MODEL := MI 9
+ PRODUCT_MANUFACTURER := Xiaomi
+-WITH_GAPPS := true
+-TARGET_GAPPS_ARCH := arm64
+ IS_PHONE := true
+-TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
+ 
+ PRODUCT_BUILD_PROP_OVERRIDES += \
+ 	PRODUCT_NAME="cepheus" \
+@@ -41,4 +37,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
+ 
+ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+ $(call inherit-product, vendor/MiuiCamera/config.mk)
++$(call inherit-product, vendor/microg/microg.mk)
++
+ 
+diff --git a/msmnile.mk b/msmnile.mk
+index 7af6f55..f10a27d 100644
+--- a/msmnile.mk
++++ b/msmnile.mk
+@@ -18,8 +18,6 @@
+ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
+ 
+ # Enable updating of APEXes
+-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+-$(call inherit-product, vendor/google/customization/config.mk)
+ 
+ # Setup dalvik vm configs
+ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+-- 
+2.25.1
+
