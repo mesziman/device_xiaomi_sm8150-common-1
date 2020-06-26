@@ -53,8 +53,6 @@ public:
     Return<void> setCallback(const sp<IFingerprintInscreenCallback>& callback) override;
 
 private:
-    bool mFodCircleVisible;
-    bool shouldChangeDcStatus;
     sp<IXiaomiFingerprint> xiaomiFingerprintService;
 };
 
